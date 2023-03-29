@@ -23,7 +23,9 @@ function generateHTML() {
   paragraph1.appendChild(document.createTextNode("Created on " + date));
   var paragraph2 = document.createElement("p");
   paragraph2.appendChild(
-    document.createTextNode("This is a simple HTML page.")
+    document.createTextNode(
+      "This is an HTML page fulfilled by a master webpage."
+    )
   );
   body.appendChild(heading);
   body.appendChild(paragraph1);
@@ -34,6 +36,6 @@ function generateHTML() {
   var htmlCode = "<!DOCTYPE html>\n" + newPage.outerHTML;
 
   // Open the new HTML page in a new tab
-  var newWindow = window.open();
+  var newWindow = window.open("", "_blank");
   newWindow.document.write(htmlCode);
 }
